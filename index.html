@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verificación accesible</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="barra-superior">
+
+        <div class="logo">
+            <span class="logo-icono">❤</span>
+            <span>Salud Fácil</span>
+        </div>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Ayuda</a>
+            <a href="#">Accesibilidad</a>
+
+            <button id="botonGuiaVoz" class="boton-guia">
+                🔊 Activar guía por voz
+            </button>
+        </nav>
+
+    </header>
+
+
+    <main class="contenedor">
+
+        <!-- Encabezado -->
+        <section class="encabezado">
+
+            <div>
+                <h1>Reserva de hora</h1>
+
+                <p>
+                    Para continuar con tu reserva, necesitamos verificar
+                    que eres una persona.
+                </p>
+            </div>
+
+            <div class="mensaje-accesible">
+                Este método está diseñado para ser accesible
+                para personas no videntes.
+            </div>
+
+        </section>
+
+
+        <!-- Verificación -->
+        <section class="verificacion">
+
+            <h2>Verificación accesible</h2>
+
+            <p class="subtitulo">
+                Selecciona el método que prefieras:
+            </p>
+
+
+            <!-- Métodos -->
+            <div class="metodos">
+
+                <button
+                        class="metodo metodo-activo"
+                        id="metodoTiempo"
+                        data-descripcion="Verificación por tiempo. Mantén presionado un botón y cuenta los pitidos hasta llegar al tiempo indicado.">
+
+                    <span class="icono-metodo">☝</span>
+
+                    <span class="texto-metodo">
+
+                        <strong>
+                            Verificación por tiempo
+                        </strong>
+
+                        <span>
+                            Mantén presionada la pantalla durante
+                            el tiempo indicado.
+                        </span>
+
+                    </span>
+
+                </button>
+
+
+                <button
+                        class="metodo"
+                        id="metodoSecuencia"
+                        data-descripcion="Verificación por secuencia. Escucha una cantidad de sonidos y luego presiona el botón esa misma cantidad de veces.">
+
+                    <span class="icono-metodo">🔊</span>
+
+                    <span class="texto-metodo">
+
+                        <strong>
+                            Verificación por secuencia
+                        </strong>
+
+                        <span>
+                            Escucha los sonidos y repite
+                            la cantidad de toques.
+                        </span>
+
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- Zona de verificación -->
+            <div class="zona-verificacion">
+
+                <!-- Instrucción -->
+                <div class="instruccion"
+                    id="zonaInstruccion"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Escuchar instrucción de la verificación">
+
+                    <h3>Instrucción actual:</h3>
+
+                    <p class="instruccion-principal"
+                    id="instruccionTiempo">
+
+                        🔊 Preparando instrucción...
+
+                    </p>
+
+                    <span class="boton-escuchar">
+                        🔊 Toca cualquier parte de este cuadro para escuchar la instrucción
+                    </span>
+
+                </div>
+
+
+                <!-- Progreso -->
+                <div class="progreso"
+                    id="zonaPresionar"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Área de verificación por tiempo. Mantén presionado y cuenta los pitidos.">
+
+                    <h3>Progreso:</h3>
+
+                    <div class="contador">
+                        <span class="numero" id="contadorTiempo">-</span>
+                        <span id="unidadContador">segundos</span>
+                    </div>
+
+                    <p>
+                        Cuenta los pitidos y suelta al llegar a la cantidad indicada.
+                    </p>
+
+                    <div class="boton-presionar" id="textoPresionar">
+                        ☝ Mantén presionado en cualquier parte de este recuadro
+                    </div>
+
+                    <p id="mensajeEstado"
+                    class="mensaje-estado"
+                    aria-live="assertive">
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

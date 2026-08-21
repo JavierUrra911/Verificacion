@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #0b2545;
+}
+
+/* Barra superior */
+.barra-superior {
+    background-color: #072a4d;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 50px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-icono {
+    font-size: 25px;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Contenido principal */
+.contenedor {
+    max-width: 1150px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Parte superior */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.encabezado h1 {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.encabezado p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Mensaje de accesibilidad */
+.mensaje-accesible {
+    background-color: #e5edff;
+    padding: 20px;
+    border-radius: 10px;
+
+    max-width: 350px;
+    text-align: center;
+
+    color: #17375e;
+}
+
+/* Caja principal de verificación */
+
+.verificacion {
+    margin-top: 40px;
+    background-color: white;
+    border: 1px solid #d6dce5;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.verificacion h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 28px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #5d6878;
+    margin-top: 8px;
+}
+
+
+/* Métodos */
+
+.metodos {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.metodo {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 25px;
+
+    background-color: white;
+    border: 2px solid #d6dce5;
+    border-radius: 12px;
+
+    cursor: pointer;
+    text-align: left;
+
+    color: #0b2545;
+}
+
+.metodo:hover {
+    border-color: #2575d8;
+}
+
+.metodo-activo {
+    border-color: #2575d8;
+    background-color: #f0f5ff;
+}
+
+.icono-metodo {
+    font-size: 40px;
+}
+
+.texto-metodo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.texto-metodo strong {
+    font-size: 18px;
+}
+
+
+/* Zona inferior */
+
+.zona-verificacion {
+    margin-top: 30px;
+
+    display: flex;
+
+    border: 1px solid #d6dce5;
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+.instruccion,
+.progreso {
+    flex: 1;
+    padding: 30px;
+}
+
+.instruccion {
+    border-right: 1px solid #d6dce5;
+}
+
+.instruccion-principal {
+    margin-top: 30px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #2575d8;
+
+    line-height: 1.5;
+}
+
+
+/* Botón escuchar */
+
+.boton-escuchar {
+    margin-top: 15px;
+
+    border: none;
+    background: none;
+
+    color: #42566f;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* Progreso */
+
+
+
+.progreso h3 {
+    text-align: left;
+}
+
+.contador {
+    width: 150px;
+    height: 150px;
+
+    margin: 15px auto;
+
+    border: 10px solid #2575d8;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.numero {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+
+/* Botón principal */
+
+.boton-presionar {
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 18px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #1473e6;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.boton-presionar:hover {
+    background-color: #0b5fc4;
+}
+
+
+/* Adaptación para celular */
+
+@media (max-width: 750px) {
+
+    .encabezado {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .metodos {
+        flex-direction: column;
+    }
+
+    .zona-verificacion {
+        flex-direction: column;
+    }
+
+    .instruccion {
+        border-right: none;
+        border-bottom: 1px solid #d6dce5;
+    }
+
+    .barra-superior {
+        padding: 15px 20px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+}
+
+.progreso {
+    text-align: center;
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+}
+
+
+.boton-guia {
+    background: none;
+    border: 1px solid white;
+    border-radius: 6px;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.boton-guia:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.progreso:hover,
+.instruccion:hover {
+    background-color: #f7faff;
+}
+
+.progreso:focus,
+.instruccion:focus {
+    outline: 3px solid #2575d8;
+    outline-offset: -3px;
+}
+
+.instruccion {
+    cursor: pointer;
+}
